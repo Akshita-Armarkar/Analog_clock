@@ -1,2 +1,769 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");html,body{padding:0;margin:0;width:100%;height:100%;font-family:'Noto Sans JP', sans-serif;font-size:14px;color:white;background-color:burlywood}*{text-align:center}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: burlywood;
+}
+
+* {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.clock-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+}
+
+.tickers {
+  height: 100%;
+  width: 100%;
+  counter-reset: digit;
+}
+
+.tickers span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tickers span::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: '';
+  height: 3%;
+  width: 1%;
+  background-color: black;
+  border-radius: 30%;
+}
+
+.tickers span:nth-child(5n)::before {
+  height: 6%;
+  width: 1.5%;
+  border-radius: 20%;
+}
+
+.tickers span:nth-child(5n)::after {
+  display: block;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  counter-increment: digit;
+  content: counter(digit);
+  font-size: 1.5rem;
+}
+
+.tickers span:nth-child(1) {
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+}
+
+.tickers span:nth-child(1)::after {
+  -webkit-transform: translateX(-50%) rotate(-6deg);
+          transform: translateX(-50%) rotate(-6deg);
+}
+
+.tickers span:nth-child(2) {
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+.tickers span:nth-child(2)::after {
+  -webkit-transform: translateX(-50%) rotate(-12deg);
+          transform: translateX(-50%) rotate(-12deg);
+}
+
+.tickers span:nth-child(3) {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+.tickers span:nth-child(3)::after {
+  -webkit-transform: translateX(-50%) rotate(-18deg);
+          transform: translateX(-50%) rotate(-18deg);
+}
+
+.tickers span:nth-child(4) {
+  -webkit-transform: rotate(24deg);
+          transform: rotate(24deg);
+}
+
+.tickers span:nth-child(4)::after {
+  -webkit-transform: translateX(-50%) rotate(-24deg);
+          transform: translateX(-50%) rotate(-24deg);
+}
+
+.tickers span:nth-child(5) {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.tickers span:nth-child(5)::after {
+  -webkit-transform: translateX(-50%) rotate(-30deg);
+          transform: translateX(-50%) rotate(-30deg);
+}
+
+.tickers span:nth-child(6) {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
+}
+
+.tickers span:nth-child(6)::after {
+  -webkit-transform: translateX(-50%) rotate(-36deg);
+          transform: translateX(-50%) rotate(-36deg);
+}
+
+.tickers span:nth-child(7) {
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+}
+
+.tickers span:nth-child(7)::after {
+  -webkit-transform: translateX(-50%) rotate(-42deg);
+          transform: translateX(-50%) rotate(-42deg);
+}
+
+.tickers span:nth-child(8) {
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg);
+}
+
+.tickers span:nth-child(8)::after {
+  -webkit-transform: translateX(-50%) rotate(-48deg);
+          transform: translateX(-50%) rotate(-48deg);
+}
+
+.tickers span:nth-child(9) {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+
+.tickers span:nth-child(9)::after {
+  -webkit-transform: translateX(-50%) rotate(-54deg);
+          transform: translateX(-50%) rotate(-54deg);
+}
+
+.tickers span:nth-child(10) {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.tickers span:nth-child(10)::after {
+  -webkit-transform: translateX(-50%) rotate(-60deg);
+          transform: translateX(-50%) rotate(-60deg);
+}
+
+.tickers span:nth-child(11) {
+  -webkit-transform: rotate(66deg);
+          transform: rotate(66deg);
+}
+
+.tickers span:nth-child(11)::after {
+  -webkit-transform: translateX(-50%) rotate(-66deg);
+          transform: translateX(-50%) rotate(-66deg);
+}
+
+.tickers span:nth-child(12) {
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg);
+}
+
+.tickers span:nth-child(12)::after {
+  -webkit-transform: translateX(-50%) rotate(-72deg);
+          transform: translateX(-50%) rotate(-72deg);
+}
+
+.tickers span:nth-child(13) {
+  -webkit-transform: rotate(78deg);
+          transform: rotate(78deg);
+}
+
+.tickers span:nth-child(13)::after {
+  -webkit-transform: translateX(-50%) rotate(-78deg);
+          transform: translateX(-50%) rotate(-78deg);
+}
+
+.tickers span:nth-child(14) {
+  -webkit-transform: rotate(84deg);
+          transform: rotate(84deg);
+}
+
+.tickers span:nth-child(14)::after {
+  -webkit-transform: translateX(-50%) rotate(-84deg);
+          transform: translateX(-50%) rotate(-84deg);
+}
+
+.tickers span:nth-child(15) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.tickers span:nth-child(15)::after {
+  -webkit-transform: translateX(-50%) rotate(-90deg);
+          transform: translateX(-50%) rotate(-90deg);
+}
+
+.tickers span:nth-child(16) {
+  -webkit-transform: rotate(96deg);
+          transform: rotate(96deg);
+}
+
+.tickers span:nth-child(16)::after {
+  -webkit-transform: translateX(-50%) rotate(-96deg);
+          transform: translateX(-50%) rotate(-96deg);
+}
+
+.tickers span:nth-child(17) {
+  -webkit-transform: rotate(102deg);
+          transform: rotate(102deg);
+}
+
+.tickers span:nth-child(17)::after {
+  -webkit-transform: translateX(-50%) rotate(-102deg);
+          transform: translateX(-50%) rotate(-102deg);
+}
+
+.tickers span:nth-child(18) {
+  -webkit-transform: rotate(108deg);
+          transform: rotate(108deg);
+}
+
+.tickers span:nth-child(18)::after {
+  -webkit-transform: translateX(-50%) rotate(-108deg);
+          transform: translateX(-50%) rotate(-108deg);
+}
+
+.tickers span:nth-child(19) {
+  -webkit-transform: rotate(114deg);
+          transform: rotate(114deg);
+}
+
+.tickers span:nth-child(19)::after {
+  -webkit-transform: translateX(-50%) rotate(-114deg);
+          transform: translateX(-50%) rotate(-114deg);
+}
+
+.tickers span:nth-child(20) {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.tickers span:nth-child(20)::after {
+  -webkit-transform: translateX(-50%) rotate(-120deg);
+          transform: translateX(-50%) rotate(-120deg);
+}
+
+.tickers span:nth-child(21) {
+  -webkit-transform: rotate(126deg);
+          transform: rotate(126deg);
+}
+
+.tickers span:nth-child(21)::after {
+  -webkit-transform: translateX(-50%) rotate(-126deg);
+          transform: translateX(-50%) rotate(-126deg);
+}
+
+.tickers span:nth-child(22) {
+  -webkit-transform: rotate(132deg);
+          transform: rotate(132deg);
+}
+
+.tickers span:nth-child(22)::after {
+  -webkit-transform: translateX(-50%) rotate(-132deg);
+          transform: translateX(-50%) rotate(-132deg);
+}
+
+.tickers span:nth-child(23) {
+  -webkit-transform: rotate(138deg);
+          transform: rotate(138deg);
+}
+
+.tickers span:nth-child(23)::after {
+  -webkit-transform: translateX(-50%) rotate(-138deg);
+          transform: translateX(-50%) rotate(-138deg);
+}
+
+.tickers span:nth-child(24) {
+  -webkit-transform: rotate(144deg);
+          transform: rotate(144deg);
+}
+
+.tickers span:nth-child(24)::after {
+  -webkit-transform: translateX(-50%) rotate(-144deg);
+          transform: translateX(-50%) rotate(-144deg);
+}
+
+.tickers span:nth-child(25) {
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+
+.tickers span:nth-child(25)::after {
+  -webkit-transform: translateX(-50%) rotate(-150deg);
+          transform: translateX(-50%) rotate(-150deg);
+}
+
+.tickers span:nth-child(26) {
+  -webkit-transform: rotate(156deg);
+          transform: rotate(156deg);
+}
+
+.tickers span:nth-child(26)::after {
+  -webkit-transform: translateX(-50%) rotate(-156deg);
+          transform: translateX(-50%) rotate(-156deg);
+}
+
+.tickers span:nth-child(27) {
+  -webkit-transform: rotate(162deg);
+          transform: rotate(162deg);
+}
+
+.tickers span:nth-child(27)::after {
+  -webkit-transform: translateX(-50%) rotate(-162deg);
+          transform: translateX(-50%) rotate(-162deg);
+}
+
+.tickers span:nth-child(28) {
+  -webkit-transform: rotate(168deg);
+          transform: rotate(168deg);
+}
+
+.tickers span:nth-child(28)::after {
+  -webkit-transform: translateX(-50%) rotate(-168deg);
+          transform: translateX(-50%) rotate(-168deg);
+}
+
+.tickers span:nth-child(29) {
+  -webkit-transform: rotate(174deg);
+          transform: rotate(174deg);
+}
+
+.tickers span:nth-child(29)::after {
+  -webkit-transform: translateX(-50%) rotate(-174deg);
+          transform: translateX(-50%) rotate(-174deg);
+}
+
+.tickers span:nth-child(30) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.tickers span:nth-child(30)::after {
+  -webkit-transform: translateX(-50%) rotate(-180deg);
+          transform: translateX(-50%) rotate(-180deg);
+}
+
+.tickers span:nth-child(31) {
+  -webkit-transform: rotate(186deg);
+          transform: rotate(186deg);
+}
+
+.tickers span:nth-child(31)::after {
+  -webkit-transform: translateX(-50%) rotate(-186deg);
+          transform: translateX(-50%) rotate(-186deg);
+}
+
+.tickers span:nth-child(32) {
+  -webkit-transform: rotate(192deg);
+          transform: rotate(192deg);
+}
+
+.tickers span:nth-child(32)::after {
+  -webkit-transform: translateX(-50%) rotate(-192deg);
+          transform: translateX(-50%) rotate(-192deg);
+}
+
+.tickers span:nth-child(33) {
+  -webkit-transform: rotate(198deg);
+          transform: rotate(198deg);
+}
+
+.tickers span:nth-child(33)::after {
+  -webkit-transform: translateX(-50%) rotate(-198deg);
+          transform: translateX(-50%) rotate(-198deg);
+}
+
+.tickers span:nth-child(34) {
+  -webkit-transform: rotate(204deg);
+          transform: rotate(204deg);
+}
+
+.tickers span:nth-child(34)::after {
+  -webkit-transform: translateX(-50%) rotate(-204deg);
+          transform: translateX(-50%) rotate(-204deg);
+}
+
+.tickers span:nth-child(35) {
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
+}
+
+.tickers span:nth-child(35)::after {
+  -webkit-transform: translateX(-50%) rotate(-210deg);
+          transform: translateX(-50%) rotate(-210deg);
+}
+
+.tickers span:nth-child(36) {
+  -webkit-transform: rotate(216deg);
+          transform: rotate(216deg);
+}
+
+.tickers span:nth-child(36)::after {
+  -webkit-transform: translateX(-50%) rotate(-216deg);
+          transform: translateX(-50%) rotate(-216deg);
+}
+
+.tickers span:nth-child(37) {
+  -webkit-transform: rotate(222deg);
+          transform: rotate(222deg);
+}
+
+.tickers span:nth-child(37)::after {
+  -webkit-transform: translateX(-50%) rotate(-222deg);
+          transform: translateX(-50%) rotate(-222deg);
+}
+
+.tickers span:nth-child(38) {
+  -webkit-transform: rotate(228deg);
+          transform: rotate(228deg);
+}
+
+.tickers span:nth-child(38)::after {
+  -webkit-transform: translateX(-50%) rotate(-228deg);
+          transform: translateX(-50%) rotate(-228deg);
+}
+
+.tickers span:nth-child(39) {
+  -webkit-transform: rotate(234deg);
+          transform: rotate(234deg);
+}
+
+.tickers span:nth-child(39)::after {
+  -webkit-transform: translateX(-50%) rotate(-234deg);
+          transform: translateX(-50%) rotate(-234deg);
+}
+
+.tickers span:nth-child(40) {
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+}
+
+.tickers span:nth-child(40)::after {
+  -webkit-transform: translateX(-50%) rotate(-240deg);
+          transform: translateX(-50%) rotate(-240deg);
+}
+
+.tickers span:nth-child(41) {
+  -webkit-transform: rotate(246deg);
+          transform: rotate(246deg);
+}
+
+.tickers span:nth-child(41)::after {
+  -webkit-transform: translateX(-50%) rotate(-246deg);
+          transform: translateX(-50%) rotate(-246deg);
+}
+
+.tickers span:nth-child(42) {
+  -webkit-transform: rotate(252deg);
+          transform: rotate(252deg);
+}
+
+.tickers span:nth-child(42)::after {
+  -webkit-transform: translateX(-50%) rotate(-252deg);
+          transform: translateX(-50%) rotate(-252deg);
+}
+
+.tickers span:nth-child(43) {
+  -webkit-transform: rotate(258deg);
+          transform: rotate(258deg);
+}
+
+.tickers span:nth-child(43)::after {
+  -webkit-transform: translateX(-50%) rotate(-258deg);
+          transform: translateX(-50%) rotate(-258deg);
+}
+
+.tickers span:nth-child(44) {
+  -webkit-transform: rotate(264deg);
+          transform: rotate(264deg);
+}
+
+.tickers span:nth-child(44)::after {
+  -webkit-transform: translateX(-50%) rotate(-264deg);
+          transform: translateX(-50%) rotate(-264deg);
+}
+
+.tickers span:nth-child(45) {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.tickers span:nth-child(45)::after {
+  -webkit-transform: translateX(-50%) rotate(-270deg);
+          transform: translateX(-50%) rotate(-270deg);
+}
+
+.tickers span:nth-child(46) {
+  -webkit-transform: rotate(276deg);
+          transform: rotate(276deg);
+}
+
+.tickers span:nth-child(46)::after {
+  -webkit-transform: translateX(-50%) rotate(-276deg);
+          transform: translateX(-50%) rotate(-276deg);
+}
+
+.tickers span:nth-child(47) {
+  -webkit-transform: rotate(282deg);
+          transform: rotate(282deg);
+}
+
+.tickers span:nth-child(47)::after {
+  -webkit-transform: translateX(-50%) rotate(-282deg);
+          transform: translateX(-50%) rotate(-282deg);
+}
+
+.tickers span:nth-child(48) {
+  -webkit-transform: rotate(288deg);
+          transform: rotate(288deg);
+}
+
+.tickers span:nth-child(48)::after {
+  -webkit-transform: translateX(-50%) rotate(-288deg);
+          transform: translateX(-50%) rotate(-288deg);
+}
+
+.tickers span:nth-child(49) {
+  -webkit-transform: rotate(294deg);
+          transform: rotate(294deg);
+}
+
+.tickers span:nth-child(49)::after {
+  -webkit-transform: translateX(-50%) rotate(-294deg);
+          transform: translateX(-50%) rotate(-294deg);
+}
+
+.tickers span:nth-child(50) {
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg);
+}
+
+.tickers span:nth-child(50)::after {
+  -webkit-transform: translateX(-50%) rotate(-300deg);
+          transform: translateX(-50%) rotate(-300deg);
+}
+
+.tickers span:nth-child(51) {
+  -webkit-transform: rotate(306deg);
+          transform: rotate(306deg);
+}
+
+.tickers span:nth-child(51)::after {
+  -webkit-transform: translateX(-50%) rotate(-306deg);
+          transform: translateX(-50%) rotate(-306deg);
+}
+
+.tickers span:nth-child(52) {
+  -webkit-transform: rotate(312deg);
+          transform: rotate(312deg);
+}
+
+.tickers span:nth-child(52)::after {
+  -webkit-transform: translateX(-50%) rotate(-312deg);
+          transform: translateX(-50%) rotate(-312deg);
+}
+
+.tickers span:nth-child(53) {
+  -webkit-transform: rotate(318deg);
+          transform: rotate(318deg);
+}
+
+.tickers span:nth-child(53)::after {
+  -webkit-transform: translateX(-50%) rotate(-318deg);
+          transform: translateX(-50%) rotate(-318deg);
+}
+
+.tickers span:nth-child(54) {
+  -webkit-transform: rotate(324deg);
+          transform: rotate(324deg);
+}
+
+.tickers span:nth-child(54)::after {
+  -webkit-transform: translateX(-50%) rotate(-324deg);
+          transform: translateX(-50%) rotate(-324deg);
+}
+
+.tickers span:nth-child(55) {
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);
+}
+
+.tickers span:nth-child(55)::after {
+  -webkit-transform: translateX(-50%) rotate(-330deg);
+          transform: translateX(-50%) rotate(-330deg);
+}
+
+.tickers span:nth-child(56) {
+  -webkit-transform: rotate(336deg);
+          transform: rotate(336deg);
+}
+
+.tickers span:nth-child(56)::after {
+  -webkit-transform: translateX(-50%) rotate(-336deg);
+          transform: translateX(-50%) rotate(-336deg);
+}
+
+.tickers span:nth-child(57) {
+  -webkit-transform: rotate(342deg);
+          transform: rotate(342deg);
+}
+
+.tickers span:nth-child(57)::after {
+  -webkit-transform: translateX(-50%) rotate(-342deg);
+          transform: translateX(-50%) rotate(-342deg);
+}
+
+.tickers span:nth-child(58) {
+  -webkit-transform: rotate(348deg);
+          transform: rotate(348deg);
+}
+
+.tickers span:nth-child(58)::after {
+  -webkit-transform: translateX(-50%) rotate(-348deg);
+          transform: translateX(-50%) rotate(-348deg);
+}
+
+.tickers span:nth-child(59) {
+  -webkit-transform: rotate(354deg);
+          transform: rotate(354deg);
+}
+
+.tickers span:nth-child(59)::after {
+  -webkit-transform: translateX(-50%) rotate(-354deg);
+          transform: translateX(-50%) rotate(-354deg);
+}
+
+.tickers span:nth-child(60) {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.tickers span:nth-child(60)::after {
+  -webkit-transform: translateX(-50%) rotate(-360deg);
+          transform: translateX(-50%) rotate(-360deg);
+}
+
+.second-hand {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.second-hand .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: maroon;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.second-hand .hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -100%) rotate(0deg);
+          transform: translate(-50%, -100%) rotate(0deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  border-radius: 5px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  background-color: maroon;
+  height: 48%;
+  width: 0.5%;
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.7);
+}
+
+.minute-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -100%) rotate(10deg);
+          transform: translate(-50%, -100%) rotate(10deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  border-radius: 5px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  background-color: black;
+  height: 45%;
+  width: 1.5%;
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.7);
+}
+
+.hour-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -100%) rotate(45deg);
+          transform: translate(-50%, -100%) rotate(45deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  border-radius: 5px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  background-color: black;
+  height: 36%;
+  width: 3%;
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.7);
+}
 /*# sourceMappingURL=style.css.map */
